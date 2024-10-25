@@ -4,9 +4,9 @@ export const metadata = {
   title: "Tickets",
 }
 
-export default function TicketsPage() {
+export default function FeaturesPage() {
   return (
-    <div>Tickets Page  
+    <div>Features Page  
       
     </div>
   )

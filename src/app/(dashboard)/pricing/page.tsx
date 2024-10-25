@@ -4,8 +4,8 @@ export const metadata = {
   title: "Customers",
 }
 
-export default function CustomersPage() {
+export default function PricingPage() {
   return (
-    <div>Customers Page</div>
+    <div>Pricing Page</div>
   )
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { HomeIcon, Settings, Ticket, Users2 } from "lucide-react";
+import { HomeIcon, PoundSterling, Settings, Ticket } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
@@ -15,14 +15,14 @@ export const dashboardLinks = [
   },
   {
     id: 1,
-    name: "Customers",
-    href: "/customers",
-    icon: Users2,
+    name: "Pricing",
+    href: "/pricing",
+    icon: PoundSterling,
   },
   {
     id: 2,
-    name: "Tickets",
-    href: "/tickets",
+    name: "Features",
+    href: "/features",
     icon: Ticket,
   },
   {
