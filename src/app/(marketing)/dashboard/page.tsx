@@ -6,6 +6,6 @@ export const metadata = {
 
 export default function DashboardPage() {
   return (
-    <div>Home Page</div>
+    <div>Dashboard Page</div>
   )
 }

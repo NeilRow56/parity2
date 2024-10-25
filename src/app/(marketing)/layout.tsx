@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Menu, LogOut } from "lucide-react";
-
+import {SignedIn, SignedOut} from "@clerk/nextjs"
 
 
 import { Button } from "@/components/ui/button";
@@ -77,9 +77,15 @@ export default async function DashboardLayout({ children }: { children: ReactNod
 
             <div className="ml-auto flex items-center gap-x-4">
               <ThemeToggle />
+              <SignedIn>
+                <Link href="/dasgboard">
+                Dashboard
+                </Link>
+              </SignedIn>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button
+                  
+                <Button
                     variant="secondary"
                     size="icon"
                     className="rounded-full"
@@ -98,7 +104,11 @@ export default async function DashboardLayout({ children }: { children: ReactNod
                     <Link href="/settings">Settings</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    Sign Out
+                    <SignedOut>
+                      <SignedIn>
+                        Login
+                      </SignedIn>
+                    </SignedOut>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
