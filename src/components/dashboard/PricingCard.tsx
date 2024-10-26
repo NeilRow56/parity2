@@ -30,7 +30,7 @@ export function PricingCard({
       <Card
         className={cn(
           "relative shadow-none rounded-3xl overflow-hidden",
-          isMostPopular ? "border-accent border-2" : "border-none"
+          isMostPopular ? "border-orange-500 border-2" : "border-accent border-2"
         )}
       >
         {isMostPopular && (
@@ -52,7 +52,7 @@ export function PricingCard({
           <SignUpButton>
             <Button
               className="text-lg w-full rounded-lg"
-            //   variant={isMostPopular ? "accent" : "default"}
+              variant={isMostPopular ? "accent" : "default"}
             >
               Get Started
             </Button>
