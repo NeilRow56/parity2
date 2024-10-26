@@ -6,6 +6,8 @@ import { NeonIcon } from "./_icons/Neon";
 import { ClerkIcon } from "./_icons/Clerk";
 import { subscriptionTiersInOrder } from "@/data/subscriptionTiers";
 import { PricingCard } from "@/components/dashboard/PricingCard";
+import { Logo } from "@/components/Logo";
+import { FooterLinkGroup } from "@/components/dashboard/FooterLinkGroup";
 
 
 export default function Home() {
@@ -64,7 +66,7 @@ export default function Home() {
     </div>
   </div>
 </section>
-<section id="pricing" className=" px-8 py-16 bg-accent/5">
+<section id="pricing" className=" px-8 py-12 bg-accent/5 ">
         <h2 className="text-4xl text-center text-balance font-semibold mb-8">
           Pricing software which pays for itself 20x over
         </h2>
@@ -76,7 +78,76 @@ export default function Home() {
           
           
         </div>
-      </section>
+</section>
+      <footer className="container pt-16 pb-8 flex flex-col sm:flex-row gap-8 sm:gap-4 justify-between items-start">
+        <Link href="/">
+          <Logo />
+        </Link>
+        <div className="flex flex-col sm:flex-row gap-8">
+          <div className="flex flex-col gap-8">
+            <FooterLinkGroup
+              title="Help"
+              links={[
+                { label: "PPP Discounts", href: "/" },
+                { label: "Discount API", href: "1" },
+              ]}
+            />
+            <FooterLinkGroup
+              title="Solutions"
+              links={[
+                { label: "Newsletter", href: "/" },
+                { label: "SaaS Business", href: "/" },
+                { label: "Online Courses", href: "/" },
+              ]}
+            />
+          </div>
+          <div className="flex flex-col gap-8">
+            <FooterLinkGroup
+              title="Features"
+              links={[{ label: "PPP Discounts", href: "/" }]}
+            />
+            <FooterLinkGroup
+              title="Tools"
+              links={[
+                { label: "Salary Converter", href: "/" },
+                { label: "Coupon Generator", href: "/" },
+                { label: "Stripe App", href: "/" },
+              ]}
+            />
+            <FooterLinkGroup
+              title="Company"
+              links={[
+                { label: "Affiliate", href: "/" },
+                { label: "Twitter", href: "/" },
+                { label: "Terms of Service", href: "/" },
+              ]}
+            />
+          </div>
+          <div className="flex flex-col gap-8">
+            <FooterLinkGroup
+              title="Integrations"
+              links={[
+                { label: "Lemon Squeezy", href: "/" },
+                { label: "Gumroad", href: "/" },
+                { label: "Stripe", href: "/" },
+                { label: "Chargebee", href: "/" },
+                { label: "Paddle", href: "/" },
+              ]}
+            />
+            <FooterLinkGroup
+              title="Tutorials"
+              links={[
+                { label: "Any Website", href: "/" },
+                { label: "Lemon Squeezy", href: "/" },
+                { label: "Gumroad", href: "/" },
+                { label: "Stripe", href: "/" },
+                { label: "Chargebee", href: "/" },
+                { label: "Paddle", href: "/" },
+              ]}
+            />
+          </div>
+        </div>
+      </footer>
 </>
   )
 }

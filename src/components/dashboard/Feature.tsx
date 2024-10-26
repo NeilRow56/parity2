@@ -11,7 +11,7 @@ export function Feature ({
   }) {
     return(
         <div className={cn("flex items-center gap-2", className)}>
-      <CheckIcon className="size-4 stroke-accent bg-accent/25 rounded-full p-0.5" />
+      <CheckIcon className="size-4 stroke-primary bg-accent/90 rounded-full p-0.5" />
       <span>{children}</span>
     </div>
     )
