@@ -10,6 +10,8 @@ import { SignUpButton } from "@clerk/nextjs"
 import { Button } from "../ui/button"
 import { subscriptionTiersInOrder } from "@/data/subscriptionTiers"
 import { cn } from "@/lib/utils"
+import { formatCompactNumber } from "@/lib/formatters"
+import { Feature } from "./Feature"
 
 
 
@@ -42,8 +44,8 @@ export function PricingCard({
             ${priceInCents / 100} /mo
           </CardTitle>
           <CardDescription>
-            Number of Visits
-            {/* {formatCompactNumber(maxNumberOfVisits)} pricing page visits/mo */}
+           
+            {formatCompactNumber(maxNumberOfVisits)} page visits/month
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -58,14 +60,14 @@ export function PricingCard({
         </CardContent>
         <CardFooter className="flex flex-col gap-4 items-start">
             Card Footer
-          {/* <Feature className="font-bold">
+          <Feature className="font-bold">
             {maxNumberOfProducts}{" "}
             {maxNumberOfProducts === 1 ? "product" : "products"}
           </Feature>
           <Feature>PPP discounts</Feature>
           {canAccessAnalytics && <Feature>Advanced analytics</Feature>}
           {canRemoveBranding && <Feature>Remove Easy PPP branding</Feature>}
-          {canCustomizeBanner && <Feature>Banner customization</Feature>} */}
+          {canCustomizeBanner && <Feature>Banner customization</Feature>}
         </CardFooter>
       </Card>
     )
