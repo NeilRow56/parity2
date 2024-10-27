@@ -13,20 +13,26 @@ export const dashboardLinks = [
     href: "/dashboard",
     icon: HomeIcon,
   },
-  {
+   {
     id: 1,
-    name: "Pricing",
-    href: "/pricing",
-    icon: PoundSterling,
-  },
-  {
-    id: 2,
-    name: "Features",
-    href: "/features",
+    name: "Subscription",
+    href: "/subscription",
     icon: Ticket,
   },
   {
+    id: 2,
+    name: "Products",
+    href: "/products",
+    icon: Settings,
+  },
+  {
     id: 3,
+    name: "Analytics",
+    href: "/analytics",
+    icon: Settings,
+  },
+  {
+    id: 4,
     name: "Settings",
     href: "/settings",
     icon: Settings,
