@@ -20,15 +20,17 @@ export function DeleteProductAlertDialogContent({ id }: { id: string }) {
   return (
     <AlertDialogContent>
       <AlertDialogHeader>
-        <AlertDialogTitle>Are you sure?</AlertDialogTitle>
+        <AlertDialogTitle><span className="text-2xl text-red-500 font-bold">Are you sure?</span></AlertDialogTitle>
         <AlertDialogDescription>
-          This action cannot be undone. This will permanently delete this
-          product.
+          <span className="font-bold">This action cannot be undone. This will permanently delete this
+          product.</span>
+          
         </AlertDialogDescription>
       </AlertDialogHeader>
       <AlertDialogFooter>
         <AlertDialogCancel>Cancel</AlertDialogCancel>
         <AlertDialogAction
+        className="bg-red-500"
           onClick={() => {
             startDeleteTransition(async () => {
               const data = await deleteProduct(id)
