@@ -69,7 +69,7 @@ export function ProductCard({
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   <DropdownMenuItem asChild>
-                    <Link href={`/dashboard/products/${id}/edit`}>Edit</Link>
+                    <Link href={`/products/${id}/edit`}>Edit</Link>
                   </DropdownMenuItem>
                   <DialogTrigger asChild>
                     <DropdownMenuItem>Add To Site</DropdownMenuItem>
